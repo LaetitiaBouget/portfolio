@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Images test
+*.png
+*.jpg
+*.jpeg
+*.gif
