@@ -4,6 +4,7 @@ import Project from '../pages/Project';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
 import NotFound from '../pages/NotFound';
+import { projectLoader } from './loaders/projectLoader';
 
 const routes = [
     {
@@ -18,6 +19,13 @@ const routes = [
             {
                 path: 'project',
                 Component: Project
+            },
+            {
+                path: 'project/:id',
+                Component: Project,
+                loader: projectLoader,
+                errorElement: <NotFound />
+
             },
             {
                 path: 'about',
