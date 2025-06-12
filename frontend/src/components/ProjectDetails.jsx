@@ -6,9 +6,15 @@ const ProjectDetails = () => {
 
   return (
     <div>
+        <Link to="/">Retour</Link>
         <h1>{project.title}</h1>
         <p>{project.description}</p>
-        <Link to="/">Retour</Link>
+        <div className="project-images">
+        {project.images.map((imgUrl, index) => (
+          <img key={index} src={imgUrl} />
+        ))}
+      </div>
+        
     </div>
   );
 };

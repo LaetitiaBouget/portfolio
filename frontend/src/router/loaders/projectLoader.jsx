@@ -1,9 +1,10 @@
-import { projects } from '../../assets/dataProjects';
+import axiosInstance from '../../api/axios';
 
 export async function projectLoader({ params }) {
-    const project = projects.find(p => p.id === params.id);
-    if(!project) {
-        throw new Response("Not Found", { status: 404 });
-    }
-    return project;
+  try {
+    const response = await axiosInstance.get(`/projects/${params.id}`);
+    return response.data;
+  } catch (error) {
+    throw new Response("Not Found", { status: 404 });
+  }
 }
