@@ -10,7 +10,7 @@ const projectSchema = mongoose.Schema ({
     clientObjectives: String,
     missions: String,
     techStack: [String],
-    projectDate: Date,
-}, { timestamps: true });
+    deliveryDate: { type: Date, required: true }
+});
 
 module.exports = mongoose.model('Project', projectSchema);
