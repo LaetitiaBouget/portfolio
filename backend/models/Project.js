@@ -7,8 +7,8 @@ const projectSchema = mongoose.Schema ({
     url: String,
     coverImage: String,
     images: [String],
-    clientObjectives: String,
-    missions: String,
+    clientObjectives: [String],
+    missions: [String],
     techStack: [String],
     deliveryDate: { type: Date, required: true }
 });
