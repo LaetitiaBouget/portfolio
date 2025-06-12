@@ -14,13 +14,13 @@ export const projects = [
     {
         "id": "3",
         "title": "Projet 3",
-        "cover": "https://laetitia-bouget.fr/images/4.png",
+        "cover": "https://laetitia-bouget.fr/images/3.png",
         "description": "Projet 3 sur blablablala"
     },
     {
         "id": "4",
         "title": "Projet 4",
-        "cover": "https://laetitia-bouget.fr/images/5.png",
+        "cover": "https://laetitia-bouget.fr/images/4.png",
         "description": "Projet 4 sur blablablala"
     }
 ]

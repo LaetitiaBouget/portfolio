@@ -4,17 +4,19 @@ import { Link } from 'react-router';
 const NavBar = () => {
     return (
         <header>
-            <img src = { logo } className='logo'/>
+            <Link to="/">
+                <img src = { logo } className='logo'/>
+            </Link>
             <nav>
                 <ul>
                     <li>
-                        <Link to="/">REALISATIONS</Link>
+                        <Link to="/">Réalisations</Link>
                     </li>
                     <li>
-                        <Link to="/about">A PROPOS</Link>
+                        <Link to="/about">À propos</Link>
                     </li>
                     <li>
-                        <Link to="/contact">CONTACT</Link>
+                        <Link to="/contact">Contact</Link>
                     </li>
                 </ul>
             </nav>

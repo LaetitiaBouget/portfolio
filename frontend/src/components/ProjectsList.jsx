@@ -4,12 +4,14 @@ import ProjectCard from './ProjectCard';
 
 const ProjectsList = () => {
     return (
-        <div>
-            {projects.map(project => (
-                <Link key={project.id} to={`/project/${project.id}`}>
-                    <ProjectCard project={project}/>
-                </Link>
-            ))}
+        <div className ="projects__container">
+            <div className ="projects__list">
+                {projects.map(project => (
+                    <Link key={project.id} to={`/project/${project.id}`}>
+                        <ProjectCard project={project}/>
+                    </Link>
+                ))}
+            </div>
         </div>
     )
 }

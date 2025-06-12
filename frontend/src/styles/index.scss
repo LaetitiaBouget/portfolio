@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap');
+
+$font-main: 'Lato', sans-serif;
+
+$font-nav: 'Sono', sans-serif;
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+body {
+  font-family:$font-main;
+}
+
+header{
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.logo {
+  max-width:450px;
+  height:auto;
+}
+
+nav ul {
+  width: 100%;
+  font-family: $font-nav;
+  text-transform: uppercase;
+  font-size: calc(1rem + 0.2vw);
+  display: flex;
+  gap:20px;
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+
+nav ul li a{
+  position:relative;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+.main__content {
+  width:100%;
+}
+
+.projects__list {
+  margin-top:calc(1rem + 2vw);
+  width:100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.project__card {
+ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+ border-radius: 2% 98% 2% 98% / 96% 3% 97% 4%  ;
+}
+
+.project__card img {
+  border-radius: 2% 98% 2% 98% / 96% 3% 97% 4%    ;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.project__card:hover img {
+  transform: scale(1.05);
+}
+
