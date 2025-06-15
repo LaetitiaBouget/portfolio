@@ -1,5 +1,6 @@
 import { useLoaderData } from 'react-router';
 import { Link } from 'react-router';
+import SlideShow from './SlideShow';
 
 const ProjectDetails = () => {
     const project = useLoaderData();
@@ -25,11 +26,7 @@ const ProjectDetails = () => {
           .toLocaleDateString('fr-FR', { year: 'numeric', month:'long',})
           .toUpperCase()}
         </p>
-        <div className="project-images">
-        {project.images.map((imgUrl, index) => (
-          <img key={index} src={imgUrl} />
-        ))}
-      </div>
+       <SlideShow imageUrls = {project.images} />
         
     </div>
   );
