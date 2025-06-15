@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import { getAllProjects } from '../api/projects';
 import { Link } from 'react-router';
 import ProjectCard from './ProjectCard';
