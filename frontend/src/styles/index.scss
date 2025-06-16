@@ -99,17 +99,29 @@ a:visited {
   transform: scale(1.05);
 }
 
+.link__return{
+  display: inline-flex;
+}
+
+.arrow__return {
+  width: 4rem;
+  height: auto;
+  margin-right: 0.5rem;
+}
+
 .slideShow__gallery{
-    width:70%;
+    width:100%;
     margin-top:30px;
     position:relative;
     display: block;
     aspect-ratio: 3 / 2;
     overflow: hidden;  
     .slideShow__img{
-        width:100%;
+        width:80%;
         object-fit: cover;
         border-radius: 25px;
+        margin: 0 auto;
+        display:block;
     }
     .slideShow__btn{
         all: unset;
@@ -137,3 +149,95 @@ a:visited {
     }
 }
 
+.project-details__container {
+  text-align: left;
+  
+}
+.project-details__container ul{
+  list-style-type: circle;
+  padding-left: 1.2rem;
+  margin-left: 0;
+}
+
+.project-details__container ul li{
+  margin-bottom: 1.5rem;
+}
+
+.project-details__container ul li:last-child {
+  margin-bottom: 0;
+}
+
+.project-details__container ul li::marker {
+  color: #ff5757;        
+}
+
+h1.project__title{
+  font-size:3rem;
+  color:white;
+  text-align: center;
+  margin-block: 3rem;
+  padding: 1rem;
+  background-color: #00a8a8 ;
+  box-shadow: rgba(255, 87, 87, 0.2) 0px 18px 50px -10px;border-radius: 9% 91% 30% 70% / 50% 31% 69% 50% ;
+}
+
+h2.section__title{
+  text-transform: uppercase;
+  text-align: center;
+  color:#ff5757;
+}
+
+h2.section__title.experience,
+h2.section__title.gallery{
+  margin-block: 2.5rem;
+  padding-block: 1rem;
+  background-color: #ffde59;
+  border-radius:9% 91% 30% 70% / 50% 31% 69% 50%  ;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+h3.experience__block__title{
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2rem;
+  color:#00a8a8;
+}
+.project__data {
+  display:flex;
+  gap:2rem;
+  align-items: stretch;
+}
+
+.project__infos,
+.project__missions {
+  display:flex;
+  flex: 1;
+  flex-direction: column;
+  border: solid 1px  #ff5757;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;border-radius: 8px;;
+  padding: 0.5rem;
+}
+
+.project__experience {
+  display: flex;
+  gap:2rem;
+}
+
+.experience__block {
+  margin-block:2rem;
+  width:30%;
+  padding: 1rem;
+  border-radius: 8px;
+  border:solid 1px #d4fee5;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  line-height:1.5;
+  letter-spacing: 0.02em;
+  
+}
+
+.project__gallery {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+}
