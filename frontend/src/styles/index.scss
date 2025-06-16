@@ -7,7 +7,7 @@ $font-main: 'Lato', sans-serif;
 $font-nav: 'Sono', sans-serif;
 
 #root {
-  max-width: 1280px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -23,6 +23,7 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 5rem;
 }
 
 .logo {
@@ -38,13 +39,14 @@ header{
 nav ul {
   font-family: $font-nav;
   text-transform: uppercase;
-  font-size: calc(1rem + 0.2vw);
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   list-style: none;
   margin:1rem;
   padding:0;
   gap: calc(2vw + 1rem);
+  cursor:pointer;
 }
 
 nav ul li a{
@@ -200,7 +202,7 @@ a:visited {
   color: #ff5757;        
 }
 
-h1.project__title{
+h1{
   font-size:3rem;
   color:white;
   text-align: center;
@@ -270,3 +272,33 @@ h3.experience__block__title{
   justify-content: center;
   margin: 2rem auto;
 }
+
+.about__container ul{
+  list-style: none;
+  padding:0;
+  margin-top:5rem;
+  margin-bottom:2rem;
+}
+
+.about__keywords {
+  display:flex;
+  font-size: 1.5rem;
+  gap:2rem;
+  justify-content: center;
+  color:#ff5757;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.about__keywords li{
+  align-items: center;
+  padding:1rem;
+  border-radius: 8px;
+  border: #ffde59 2px solid;
+}
+
+.about__container p {
+  font-size: 1.2rem;
+}
+
+

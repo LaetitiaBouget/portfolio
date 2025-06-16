@@ -16,7 +16,7 @@ const ProjectDetails = () => {
     <section className="project-details__container">
 
       <Link to="/" className="link__return"><img src={ArrowReturn} className="arrow__return"></img> Retour</Link>
-      <h1 className="project__title">{project.title}</h1>
+      <h1>{project.title}</h1>
 
       <div className= "project__data">
         <div className="project__infos">
