@@ -6,6 +6,7 @@ const projectSchema = mongoose.Schema ({
     client: { type: String, required: true },
     url: String,
     coverImage: String,
+    codePreview: String,
     images: [String],
     techStack: [String],
     deliveryDate: { type: Date, required: true }, 
