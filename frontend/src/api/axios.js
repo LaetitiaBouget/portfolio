@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-    baseURL: 'https://laetitia-bouget.fr/api',
+    baseURL: 'https://portfolio-api-5j0h.onrender.com/api',
     headers: {
         'Content-Type': 'application/json',
     },
