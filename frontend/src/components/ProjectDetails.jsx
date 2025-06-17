@@ -2,6 +2,8 @@ import { useLoaderData } from 'react-router';
 import { Link } from 'react-router';
 import SlideShow from './SlideShow';
 import ScrollToTopButton from './ScrollToTop';
+import { FaGithub } from "react-icons/fa";
+import { stackIcons } from '../data/icons';
 
 const ProjectDetails = () => {
   const project = useLoaderData();
@@ -23,11 +25,18 @@ const ProjectDetails = () => {
         <div className="project__infos">
             <h2 className="section__title">Présentation du projet</h2>
             <p>{project.description}</p>
-            <p>{project.url}</p>
-            <p>{project.techStack.join(', ')}</p>
-            <p>{new Date(project.deliveryDate)
+            <a href={project.url} target="_blank" rel="noopener noreferrer"> Voir sur GitHub <FaGithub /></a>
+            <p>Technologies utilisées : {project.techStack.join(', ')}</p>
+            <div className="tech-icons">
+              {project.techStack.map((tech) => {
+                const Icon = stackIcons[tech];
+                if (!Icon) return null;
+                return <Icon key={tech} title = {tech} className="icon" />
+              })}
+            </div>
+            <p>Date de livraison : {new Date(project.deliveryDate)
               .toLocaleDateString('fr-FR', { year: 'numeric', month:'long',})
-              .toUpperCase()}
+              }
             </p>
         </div>
 
