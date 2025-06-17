@@ -1,7 +1,7 @@
 import { useLoaderData } from 'react-router';
 import { Link } from 'react-router';
 import SlideShow from './SlideShow';
-import ArrowReturn from '../assets/images/arrow-return.png'
+import ScrollToTopButton from './ScrollToTop';
 
 const ProjectDetails = () => {
   const project = useLoaderData();
@@ -64,6 +64,7 @@ const ProjectDetails = () => {
       <div className="project__gallery">
         <SlideShow imageUrls = {project.images} />      
       </div>
+      <ScrollToTopButton />
     </section>
   );
 };

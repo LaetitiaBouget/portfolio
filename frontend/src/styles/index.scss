@@ -334,4 +334,28 @@ h3.experience__block__title{
   font-size: 1.2rem;
 }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #bf9e8f;
+  border: none;
+  border-radius: 50%;
+  padding: 0.8rem;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
 
+.scroll-to-top:hover {
+  background-color: #7b7444;
+}
+
+.scroll-to-top img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
