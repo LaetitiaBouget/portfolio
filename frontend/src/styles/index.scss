@@ -1,11 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Sono:wght@200..800&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap');
+$main-font: 'Lato', sans-serif;
+$secondary-font: 'Sono', sans-serif;
+$main-color: #515031;
+$secondary-color: #bf9e8f;
+$tertiary-color: #f9f5ec;
 
-$font-main: 'Lato', sans-serif;
-$font-nav: 'Sono', sans-serif;
-$main-color-text: #515031;
-$font-title: 'Sono', sans-serif;
+@mixin flex($direction: row, $justify: center, $align: center, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
 
 #root {
   max-width: 1100px;
@@ -15,35 +22,24 @@ $font-title: 'Sono', sans-serif;
 }
 
 body {
-  font-family:$font-main;
+  font-family:$main-font;
+  color: $main-color
 }
 
-p, ul, li {
-  color: $main-color-text;
-}
-a{
-  color:#515031;
-}
-
-a:visited{
-  color:#515031;
-}
-
-header{
-  width:100%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap:4rem;
-  border: solid 5px #f0e7e2;
-  border-radius: 20% 20% 0 0   ;
+* {
   box-sizing: border-box;
 }
 
-.logo {
-  width:100%;
-  height:auto;
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+a, 
+a:visited{
+  color: $main-color;
+  text-decoration: none;
 }
 
 .main__content {
@@ -51,31 +47,38 @@ header{
   margin-bottom: 5rem;
   padding:1rem;
   background-color:#f0e7e2;
-  box-sizing: border-box;
+}
+
+header{
+  width:100%;
+  margin: 0 auto;
+  @include flex($gap:4rem);
+  border: solid 5px #f0e7e2;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.logo {
+  width: 100%;
+  border-radius: 2rem 2rem 0 0;
 }
 
 nav ul {
-  font-family: $font-nav;
+  font-family: $secondary-font;
   text-transform: uppercase;
+  @include flex(column, $gap:2rem);
   font-size: 1.2rem;
-  display: flex;
-  flex-direction: column;
   list-style: none;
   margin:1rem;
   padding:0;
-  gap: calc(2vw + 1rem);
   cursor:pointer;
 }
 
-nav a {
-  color: #bf9e8f;
-}
-
+nav a,
 nav a:visited {
-  color: #bf9e8f;
+  color: $secondary-color;
 }
 
-nav ul li a{
+nav ul li a {
   position:relative;
 }
 
@@ -95,24 +98,18 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-a {
-  text-decoration: none;
-}
-
 .projects__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  justify-content: center;
   align-items: start;
   justify-items: center;
-  padding:2rem;
+  padding:0;
 }
 
 .project__card {
   position:relative;
   width:100%;
-  max-width:350px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 10px;
   overflow: hidden;
@@ -153,71 +150,21 @@ a {
   pointer-events:auto;
 }
 
-.slideShow__gallery{
-    width:100%;
-    margin-top:30px;
-    position:relative;
-    display: block;
-    aspect-ratio: 3 / 2;
-    overflow: hidden;  
-    .slideShow__img{
-        width:80%;
-        object-fit: cover;
-        border-radius: 25px;
-        margin: 0 auto;
-        display:block;
-    }
-    .slideShow__btn{
-        all: unset;
-        position:absolute;
-        top:0;
-        bottom:0;
-        padding: 1rem;
-        cursor:pointer;
-    }   
-    .slideShow__btn.left{
-        left : 0;
-    }
-    .slideShow__btn.right{
-        right:0;
-    } 
-    .slideShow__index{
-        position:absolute;
-        padding:1rem;
-        bottom:0;
-        left:0;
-        right:0;
-        margin:0 auto;
-        width:max-content;
-        color:white;
-    }
-}
-
 .project__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.link__return {
-  color : #515031;
-}
-.link__return:visited {
-  color : #515031;
+  @include flex($justify:space-between, $gap:1rem);
 }
 
 h1{
   margin-block:0;
   font-size:1.5rem;
-  color:#515031;
-  font-family: $font-title;
+  font-family: $secondary-font;
 }
 
 .project-details__container {
   text-align: left;
   
 }
+
 .project-details__container ul{
   list-style-type: circle;
   padding-left: 1.2rem;
@@ -232,17 +179,12 @@ h1{
   margin-bottom: 0;
 }
 
-.project-details__container ul li::marker {
-  color: #3d4b65;        
-}
-
 h2.section__title{
   margin-block:0.2rem;
   text-transform: uppercase;
   text-align: center;
-  font-family: $font-title;
-  color:#515031;
-  border-bottom:#bf9e8f dotted 1px;
+  font-family: $secondary-font;
+  border-bottom:$secondary-color dotted 1px;
 }
 
 h2.section__title.experience,
@@ -253,29 +195,25 @@ h2.section__title.gallery{
 
 h3.experience__block__title{
   text-align: center;
-  color:#a46844;
+  color:$secondary-color;
+  font-family: $secondary-font;
   font-size:1.1rem;
-  font-family: $font-title;
 }
 
 .project__data {
   margin-top:1.5rem;
-  display:flex;
-  gap:0.5rem;
-  align-items: stretch;
+  @include flex($align:stretch, $gap:0.5rem);
   padding:0.5rem;
 }
 
 .tech-icons {
   margin-top: 0.5rem;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
+  @include flex($gap:1rem);
 }
 
 .icon {
   font-size: 2rem;
-  color: #515031;
+  color: $main-color;
 }
 
 .project__infos {
@@ -287,9 +225,7 @@ h3.experience__block__title{
   display:flex;
   flex: 1;
   flex-direction: column;
-  background-color: #f9f5ec;
-  padding: 1.5rem;
-  border-radius: 1rem;
+  background-color: $tertiary-color;
   box-shadow: rgba(0, 0, 0, 0.05) 2px 2px 6px;
   border-radius: 10px;
   padding:0.5rem;
@@ -297,17 +233,17 @@ h3.experience__block__title{
 
 .project__experience {
   display: flex;
-  background-color: #f9f5ec;
+  background-color: $tertiary-color;
   border-radius: 10px;
 }
 
 .experience__block {
-  width:30%;
+  width:35%;
   margin:0.5rem;
   padding: 0.5rem;
   line-height:1.5;
   letter-spacing: 0.02em;
-  border-right: 1px dotted #bf9e8f;
+  border-right: 1px dotted $secondary-color;
   background-color: white;
   text-align: justify;
 }
@@ -324,9 +260,46 @@ h3.experience__block__title{
 
 .project__gallery {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  @include flex();
   margin: 1rem auto;
+}
+
+.slideShow__gallery{
+    width:80%;
+    margin-top:30px;
+    position:relative;
+    display: block;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;  
+    .slideShow__img{
+        width:100%;
+        object-fit: cover;
+        border-radius: 25px;
+        margin: 0 auto;
+        display:block;
+    }
+    .slideShow__btn{
+        all: unset;
+        position:absolute;
+        top:0;
+        bottom:0;
+        padding: 0;
+        cursor:pointer;
+    }
+    .slideShow__btn.left{
+      left : 0;
+    }
+    .slideShow__btn.right{
+        right: 0;
+    } 
+}
+
+.arrow__image {
+  width: 40px;
+  background-color: $tertiary-color;
+  border-radius: 25%;
+  height: auto;
+  display: block;
 }
 
 .about__container ul{
@@ -346,8 +319,7 @@ h3.experience__block__title{
 }
 .about__keywords li {
   width:25%;
-  background-color: #bf9e8f;
-  color: #515031;
+  background-color: $secondary-color;
   padding: 5rem 1.5rem;
   font-size: 1.2rem;
   box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 8px;
@@ -375,10 +347,11 @@ h3.experience__block__title{
   justify-content: center;
   align-items: center;
   visibility: hidden;
+  padding:0.2rem;
   text-transform: none;
   width: 100%;
   height:100%;
-  background-color: #f9f5ec;
+  background-color: $tertiary-color;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -393,13 +366,13 @@ h3.experience__block__title{
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
-  color: #515031;
+  color: $main-color;
 }
 
 .about__container p {
   font-size: 1.2rem;
   margin-top: 2rem;
-  background-color: #f9f5ec;
+  background-color: $tertiary-color;
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.05) 2px 2px 6px;
@@ -409,24 +382,149 @@ h3.experience__block__title{
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background-color: #bf9e8f;
+  background-color: $secondary-color;
   border: none;
   border-radius: 50%;
   padding: 0.8rem;
   cursor: pointer;
   z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex();
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s;
 }
 
 .scroll-to-top:hover {
-  background-color: #7b7444;
+  background-color: $main-color;
 }
 
 .scroll-to-top img {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+@media (max-width: 374px) {
+  html {
+  font-size: 13px;
+  }
+  header {
+    @include flex(column,$gap: 0);
+  }
+  nav ul {
+    @include flex(row, $gap:1.5rem);
+    font-size: 0.8rem;
+    margin-top:1.2rem;
+  }
+  .projects__list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  .project__header {
+  @include flex(column, $align:flex-start, $gap:1rem);
+  }
+  .project__data {
+    flex-direction: column;
+  }
+  .project__experience {
+    display: flex;
+    flex-direction: column;
+  }
+  .experience__block {
+    width:95%;
+  }
+  .slideShow__gallery{
+      width:100%;
+  }
+
+  .arrow__image {
+    width: 20px;
+    background-color: $tertiary-color;
+    border-radius: 25%;
+    height: auto;
+    display: block;
+  }
+  .about__container ul{
+    list-style: none;
+    padding:0;
+    margin-top:1.2rem;
+    margin-bottom:2rem;
+  }
+
+.about__keywords {
+    flex-direction: column;
+  }
+  .about__keywords li {
+    width:100%;
+  }
+
+}
+
+@media (min-width: 375px) and (max-width: 599px) {
+  html {
+  font-size: 14px;
+  }
+  header {
+    @include flex(column,$gap: 0);
+  }
+  nav ul {
+    @include flex(row, $gap:1.5rem);
+    font-size: 0.9rem;
+    margin-top:1.2rem;
+  }
+  .projects__list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  .project__header {
+  @include flex(column, $align:flex-start, $gap:1rem);
+  }
+  .project__data {
+    flex-direction: column;
+  }
+  .project__experience {
+    display: flex;
+    flex-direction: column;
+  }
+  .experience__block {
+    width:95%;
+  }
+  .slideShow__gallery{
+      width:100%;
+  }
+
+  .arrow__image {
+    width: 20px;
+    background-color: $tertiary-color;
+    border-radius: 25%;
+    height: auto;
+    display: block;
+  }
+  .about__container ul{
+    list-style: none;
+    padding:0;
+    margin-top:1.2rem;
+    margin-bottom:2rem;
+  }
+
+.about__keywords {
+    flex-direction: column;
+  }
+  .about__keywords li {
+    width:100%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  html {
+    font-size: 16px;
+  }
+    .project__experience {
+    display: flex;
+    flex-direction: column;
+  }
+    .experience__block {
+    width:95%;
+  }
+    .about__keywords li {
+    width:33%;
+  }
 }

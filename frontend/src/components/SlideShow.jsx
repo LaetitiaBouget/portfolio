@@ -28,7 +28,6 @@ const Slideshow = ( { imageUrls }) => {
                 <>
                 <button onClick = {showPrevImage} className="slideShow__btn left"><img src={ArrowLeft} className="arrow__image" alt="Précédent"/></button>
                 <button onClick = {showNextImage} className="slideShow__btn right"><img src={ArrowRight} className="arrow__image" alt="Suivant"/></button>
-                <p className = "slideShow__index"> {imageIndex+1}/{imageUrls.length}</p>
                 </>
             )}
         </div>
