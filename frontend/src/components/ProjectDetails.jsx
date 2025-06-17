@@ -1,7 +1,7 @@
 import { useLoaderData } from 'react-router';
 import { Link } from 'react-router';
 import SlideShow from './SlideShow';
-import ArrowReturn from '../assets/images/arrow-return.JPG'
+import ArrowReturn from '../assets/images/arrow-return.png'
 
 const ProjectDetails = () => {
   const project = useLoaderData();
@@ -14,14 +14,14 @@ const ProjectDetails = () => {
 
   return (
     <section className="project-details__container">
-
-      <Link to="/" className="link__return"><img src={ArrowReturn} className="arrow__return"></img> Retour</Link>
-      <h1>{project.title}</h1>
-
+      <div className="project__header">
+        <Link to="/" className="link__return">&lt;--- Retour</Link>
+        <h1>{project.title}</h1>
+      </div>
+      
       <div className= "project__data">
         <div className="project__infos">
-          <h2 className="section__title">Présentation du projet</h2>
-
+            <h2 className="section__title">Présentation du projet</h2>
             <p>{project.description}</p>
             <p>{project.url}</p>
             <p>{project.techStack.join(', ')}</p>
