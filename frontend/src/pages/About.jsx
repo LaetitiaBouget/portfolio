@@ -21,7 +21,7 @@ const About = () => {
                     </li>
                 ))}
             </ul>
-            <p>En bref, je une développeuse qui cherche à créer des applications web performantes, ergonomiques, accessibles, optimisées et éthiques.</p>
+            <p>En bref, je suis une développeuse qui cherche à créer des applications web performantes, ergonomiques, accessibles, optimisées et éthiques.</p>
         </div>
         
     );
