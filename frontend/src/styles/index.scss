@@ -116,6 +116,10 @@ nav ul li a:hover::after {
   cursor: pointer;
 }
 
+.project__card__title{
+  font-family: $secondary-font;
+  font-size:0.9rem;
+}
 .project__card img {
   position:absolute;
   top:0;

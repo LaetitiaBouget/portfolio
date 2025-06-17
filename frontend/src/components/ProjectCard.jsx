@@ -5,7 +5,7 @@ const ProjectCard = ({project}) => {
             <img src={project.coverImage} className="front"></img>
             <img src={project.codePreview} className="back"></img>
         </div>
-        <h3>{project.title}</h3>
+        <h3 className="project__card__title">{project.title}</h3>
         </>
     )
 } 
