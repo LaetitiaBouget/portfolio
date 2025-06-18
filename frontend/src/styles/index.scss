@@ -3,7 +3,7 @@
 $main-font: 'Lato', sans-serif;
 $secondary-font: 'Sono', sans-serif;
 $main-color: #515031;
-$secondary-color: #bf9e8f;
+$secondary-color: #956E5D;
 $tertiary-color: #f9f5ec;
 
 @mixin flex($direction: row, $justify: center, $align: center, $gap: 0) {
@@ -250,7 +250,6 @@ h3.experience__block__title{
   letter-spacing: 0.02em;
   border-right: 1px dotted $secondary-color;
   background-color: white;
-  text-align: justify;
 }
 
 .experience__block:last-child{
@@ -324,7 +323,7 @@ h3.experience__block__title{
 }
 .about__keywords li {
   width:25%;
-  background-color: $secondary-color;
+  background-color: #D1BBAF;
   padding: 5rem 1.5rem;
   font-size: 1.2rem;
   box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 8px;

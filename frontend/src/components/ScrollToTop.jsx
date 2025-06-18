@@ -21,7 +21,7 @@ const ScrollToTopButton = () => {
 
     return (
         <button className="scroll-to-top" onClick={scrollToTop}>
-            <img src={ArrowUp}/>
+            <img src={ArrowUp} alt="Bouton pour remonter en haut de la page"/>
         </button>
     );
 }
