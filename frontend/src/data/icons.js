@@ -1,5 +1,5 @@
-import { FaReact, FaHtml5,FaCss3,FaGit, FaGithub, FaFigma      } from 'react-icons/fa';
-import { SiMongodb,SiExpress, SiPostman, SiSwagger, SiMongoose    } from "react-icons/si";
+import { FaReact, FaHtml5,FaCss3,FaGit, FaGithub, FaFigma } from 'react-icons/fa';
+import { SiMongodb,SiExpress, SiPostman, SiSwagger, SiMongoose } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io";
 
 export const stackIcons = {

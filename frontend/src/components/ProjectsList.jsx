@@ -19,7 +19,6 @@ const ProjectsList = () => {
                 setLoading(false);
             }
         };
-
         fetchProjects();
     }, []);
 

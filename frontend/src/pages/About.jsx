@@ -9,7 +9,6 @@ const About = () => {
         { label: "Économe", tooltip: "engagée pour un numérique plus sobre et économique." },
     ];
 
-
     return (
         <div className="about__container">
             <h1>Je suis :</h1>
@@ -22,8 +21,7 @@ const About = () => {
                 ))}
             </ul>
             <p>En bref, je suis une développeuse qui cherche à créer des applications web performantes, ergonomiques, accessibles, optimisées et éthiques.</p>
-        </div>
-        
+        </div>    
     );
 };
 

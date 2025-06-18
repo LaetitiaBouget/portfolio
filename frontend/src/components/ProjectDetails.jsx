@@ -41,17 +41,17 @@ const ProjectDetails = () => {
         </div>
 
         <div className="project__missions">
-            <h2 className="section__title">Missions réalisées</h2>
-
-        
-            <ul>
-              {project.missions.map((mission, index) => (
-                <li key={index}>{mission}</li>
-              ))}
-            </ul>
+          <h2 className="section__title">Missions réalisées</h2>
+  
+          <ul>
+            {project.missions.map((mission, index) => (
+              <li key={index}>{mission}</li>
+            ))}
+          </ul>
 
         </div>
-        </div>
+      </div>
+      
       <h2 className="section__title experience">Retour d’expérience</h2>
       <div className="project__experience">
         

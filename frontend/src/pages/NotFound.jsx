@@ -1,6 +1,6 @@
 const NotFound = () => {
     return (
-        <p>Page d'erreur</p>
+        <p>ERREUR 404</p>
     );
 };
 

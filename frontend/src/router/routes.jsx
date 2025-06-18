@@ -25,7 +25,6 @@ const routes = [
                 Component: Project,
                 loader: projectLoader,
                 errorElement: <NotFound />
-
             },
             {
                 path: 'about',
